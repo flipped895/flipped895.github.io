@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>c++面试准备</title>
+    <link href="/2020/09/04/c-%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/"/>
+    <url>/2020/09/04/c-%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/</url>
+    
+    <content type="html"><![CDATA[<a id="more"></a><h3 id="说一说你理解的虚函数和多态"><a href="#说一说你理解的虚函数和多态" class="headerlink" title="说一说你理解的虚函数和多态"></a>说一说你理解的虚函数和多态</h3><p>多态的实现主要分为静态多态和动态多态。静态多态是主要是函数的重载，在编译的时候就已经确定；而动态多态主要是用虚函数的机制实现的，在运行期间动态绑定。<br>举个例子:一个父类类型的指针指向一个子类的对象时，使用父类的指针去调用子类中重写了的父类虚函数的时候，就会调用子类中重写过的函数，在父类中声明加了vitual的函数在子类中重写的时候不加virtual关键字也是虚函数<br>虚函数的实现：<br>在有虚函数的类中，类的开始部分是一个虚函数表，里面存放了虚函数的地址，实际的虚函数在代码段中。当子类继承了父类时也会继承父类的虚函数表，当子类重写父类的虚函数时，会将已经重写的函数的地址覆盖到虚函数表中的地址。<br>虚函数的缺点：<br>使用虚函数会增加访问内存的开销，降低程序运行的效率。</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>c++</tag>
+      
+      <tag>c++语法</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>分块</title>
+    <link href="/2020/07/27/%E5%88%86%E5%9D%97/"/>
+    <url>/2020/07/27/%E5%88%86%E5%9D%97/</url>
+    
+    <content type="html"><![CDATA[<p>牛客编程巅峰赛S1第4场 - 青铜&amp;白银</p><a id="more"></a><p><a href="https://ac.nowcoder.com/acm/contest/6221/B">浅尝辄止</a></p><h2 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h2><p><img src="http://ww1.sinaimg.cn/large/e8d36934gy1gh5ucwqzgpj20ly0lt750.jpg" alt="Problem.png"></p><h2 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h2>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>分块</tag>
+      
+      <tag>算法</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>排队（归并排序）</title>
+    <link href="/2020/07/27/%E6%8E%92%E9%98%9F(%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F)/"/>
+    <url>/2020/07/27/%E6%8E%92%E9%98%9F(%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F)/</url>
+    
+    <content type="html"><![CDATA[<p><a href="https://ac.nowcoder.com/acm/contest/6488/C" target="_blank" rel="noopener">排队</a></p><a id="more"></a><h3 id="题面"><a href="#题面" class="headerlink" title="题面"></a>题面</h3><p>牛客编程巅峰赛S1第5场 - 青铜&amp;白银 C题<br>牛妹在银行排队等号时，观察到以下场景。<br>银行有m个服务窗口，假设当前有n个人等待办理业务，那么这n个人会被顺序分配一个从1到n的号码。<br>等待办理业务的流程如下：<br>从第1号到第n号顺序的进行排队。<br>假设当前第1号到第i-1号都正在办理或已经办理完业务，且某个窗口A没有客人正在办理业务，那么第i号会马上到窗口A办理他的业务。<br>如果有多个这样的窗口，第i号会随意选择一个窗口。<br>在0时刻，牛妹观察到m个窗口都没有客人正在办理业务，而n个人正在等待办理业务。<br>为了简化问题，我们假设第i号不管在哪个窗口办理业务，办理业务的时间都为ai。牛妹想知道有多少对(i,j)，满足1 ≤ i &lt; j ≤n,且第i号办理业务完成的时间严格大于第j号办理业务完成的时间。对于30%数据，1≤n,m≤1000,对于100%数据，1≤n,m≤100000，1≤ai≤1e9。</p><h3 id="题解（求逆序对）"><a href="#题解（求逆序对）" class="headerlink" title="题解（求逆序对）"></a>题解（求逆序对）</h3><p>简化题目,抽象建模,先求出每一个人最早完成时间(优先队列),求逆序对(树状数组离散化/归并排序/线段树+优先队列)</p><pre><code class="hljs cpp"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> &#123;</span><span class="hljs-keyword">public</span>:    <span class="hljs-comment">/**</span><span class="hljs-comment">     * 求解合法的(i,j)对的数量</span><span class="hljs-comment">     * @param n int整型 n个人</span><span class="hljs-comment">     * @param m int整型 m个窗口</span><span class="hljs-comment">     * @param a int整型vector 长度为n的vector,顺序表示1-n号客人的办理业务所需时间</span><span class="hljs-comment">     * @return long长整型</span><span class="hljs-comment">     */</span>    <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> t[<span class="hljs-number">100007</span>];    <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> b[<span class="hljs-number">100007</span>];    <span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> ans;    <span class="hljs-function"><span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span> <span class="hljs-title">getNumValidPairs</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n, <span class="hljs-keyword">int</span> m, <span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">int</span>&gt;&amp; a)</span> </span>&#123;        priority_queue &lt;<span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span>,<span class="hljs-built_in">vector</span>&lt;<span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span>&gt;,greater&lt;<span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span>&gt; &gt; que;        ans=<span class="hljs-number">0</span>;        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;min(n,m);i++)&#123;<span class="hljs-comment">//把最开始就能直接去窗口的人的完成时间保存</span>            t[i] = a[i];            que.push(a[i]);        &#125;        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=m;i&lt;n;i++)&#123;<span class="hljs-comment">//求剩下的排队中的人的完成时间</span>            t[i] = (<span class="hljs-keyword">long</span> <span class="hljs-keyword">long</span>)a[i]+que.top();            que.pop();<span class="hljs-comment">//把最早完成的人出队,如果不出队始终都是同一个人在队首</span>            que.push(t[i]);        &#125;        merge_sort(<span class="hljs-number">0</span>,n<span class="hljs-number">-1</span>);        <span class="hljs-keyword">return</span> ans;    &#125;    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">merge</span><span class="hljs-params">(<span class="hljs-keyword">int</span> l,<span class="hljs-keyword">int</span> mid,<span class="hljs-keyword">int</span> r)</span><span class="hljs-comment">//将两段有序数列按从小到大进行整合</span></span><span class="hljs-function">    </span>&#123;        <span class="hljs-keyword">int</span> k=l;        <span class="hljs-keyword">int</span> p = l,q = mid+<span class="hljs-number">1</span>;        <span class="hljs-keyword">while</span>(k&lt;=r)&#123;            <span class="hljs-keyword">if</span>(p&lt;=mid&amp;&amp;(q&gt;r||t[p]&lt;=t[q]))&#123;                b[k++] = t[p];                p++;            &#125;            <span class="hljs-keyword">else</span>&#123;                b[k++] = t[q];                q++;                ans += (mid-p+<span class="hljs-number">1</span>);            &#125;        &#125;        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=l;i&lt;=r;i++)<span class="hljs-comment">//把已经整合好的两段序列覆盖到原序列中,没有这一步就不能保证已经走过的区间的有序性</span>            t[i] = b[i];    &#125;    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">merge_sort</span><span class="hljs-params">(<span class="hljs-keyword">int</span> l,<span class="hljs-keyword">int</span> r)</span><span class="hljs-comment">//归并排序</span></span><span class="hljs-function">    </span>&#123;        <span class="hljs-keyword">if</span>(l&gt;=r)            <span class="hljs-keyword">return</span> ;        <span class="hljs-keyword">int</span> mid = (l+r)&gt;&gt;<span class="hljs-number">1</span>;        merge_sort(l,mid);        merge_sort(mid+<span class="hljs-number">1</span>,r);        merge(l,mid,r);    &#125;&#125;;</code></pre>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>算法</tag>
+      
+      <tag>逆序对</tag>
+      
+      <tag>归并排序</tag>
+      
+      <tag>解题报告</tag>
+      
+      <tag>树状数组（离散化）</tag>
+      
+      <tag>线段树</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>static关键字</title>
+    <link href="/2020/07/27/static/"/>
+    <url>/2020/07/27/static/</url>
+    
+    <content type="html"><![CDATA[<p>摘要….</p><a id="more"></a>]]></content>
+    
+    
+    <categories>
+      
+      <category>C++</category>
+      
+      <category>static</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>c++</tag>
+      
+      <tag>static</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>第一篇博客</title>
+    <link href="/2020/07/26/article-title/"/>
+    <url>/2020/07/26/article-title/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="/2020/07/24/hello-world/"/>
+    <url>/2020/07/24/hello-world/</url>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  
+</search>
