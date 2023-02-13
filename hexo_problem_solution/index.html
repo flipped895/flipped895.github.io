@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content=",," />
 
 
 
@@ -79,12 +79,18 @@
 
 
 
+<meta name="description" content="前言折腾这个网站，前前后后从大三到现在，也有三年多了，今天终于换了想要的主题。最大的感受就是，遇到问题不要无脑试，先分析问题在哪，然后google… 问题记录 hexo d以后，主题config和本地config不一致  使用next主题，本地已经保存主题的scheme了，但是用hexo -d部署以后远端表现没有和本地同步，会出现 1&amp;#123;% extends &amp;#x27;_layout.sw">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/2023/index.html">
+<meta property="og:title" content="hexo 问题记录">
+<meta property="og:url" content="http://example.com/hexo_problem_solution/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="前言折腾这个网站，前前后后从大三到现在，也有三年多了，今天终于换了想要的主题。最大的感受就是，遇到问题不要无脑试，先分析问题在哪，然后google… 问题记录 hexo d以后，主题config和本地config不一致  使用next主题，本地已经保存主题的scheme了，但是用hexo -d部署以后远端表现没有和本地同步，会出现 1&amp;#123;% extends &amp;#x27;_layout.sw">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-02-13T03:53:14.000Z">
+<meta property="article:modified_time" content="2023-02-13T06:57:33.665Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="next">
 <meta name="twitter:card" content="summary">
 
 
@@ -115,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://example.com/archives/2023/"/>
+  <link rel="canonical" href="http://example.com/hexo_problem_solution/"/>
 
 
 
 
 
-  <title>Archive | Hexo</title>
+  <title>hexo 问题记录 | Hexo</title>
   
 
 
@@ -140,7 +146,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -214,111 +220,56 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
+    
+    
+    <div class="post-block page">
+      <header class="post-header">
 
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        Um..! 2 posts in total. Keep on posting.
-      </span>
+	<h1 class="post-title" itemprop="name headline">hexo 问题记录</h1>
+
+
+
+</header>
 
       
+      
+      
+      <div class="post-body">
+        
+        
+          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>折腾这个网站，前前后后从大三到现在，也有三年多了，今天终于换了想要的主题。最大的感受就是，遇到问题不要无脑试，先分析问题在哪，然后google…</p>
+<h2 id="问题记录"><a href="#问题记录" class="headerlink" title="问题记录"></a>问题记录</h2><ol>
+<li>hexo d以后，主题config和本地config不一致</li>
+</ol>
+<p>使用next主题，本地已经保存主题的scheme了，但是用hexo -d部署以后远端表现没有和本地同步，会出现</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% extends &#x27;_layout.swig&#x27; %&#125; &#123;% import &#x27;_macro/post.swig&#x27; as post_template %&#125; &#123;% import &#x27;_macro/sidebar.swig&#x27; as sidebar_template %&#125; &#123;% block title %&#125;&#123;&#123; config.title &#125;&#125;&#123;% if theme.index_with_subtitle and config.subtitle %&#125; - &#123;&#123;config.subtitle &#125;&#125;&#123;% endif %&#125;&#123;% endblock %&#125; &#123;% block page_class %&#125; &#123;% if is_home() %&#125;page-home&#123;% endif -%&#125; &#123;% endblock %&#125; &#123;% block content %&#125; &#123;% for post in page.posts %&#125; &#123;&#123; post_template.render(post, true) &#125;&#125; &#123;% endfor %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Solution</p>
+<p>我用的next主题是作为sub module存在于我的网站文件夹中，所以hexo d的时候并没有吧next下的改动push上去。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">next的主题作为sub module，next/_config.yml的改动没有提交上去</span><br><span class="line"><span class="built_in">cd</span> theme/next</span><br><span class="line">git add .</span><br><span class="line">git commit -m “msg”</span><br><span class="line">git push</span><br><span class="line">刷新网站即可</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>一键部署时报错</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ERROR Deployer not found: GitHub</span><br></pre></td></tr></table></figure>
+
+<p>Solution</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd theme/next</span><br><span class="line">git add .</span><br><span class="line">git commit -m “msg”</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+
+<p>刷新网站即可</p>
 
         
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2023">2023</h1>
-          </div>
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2023/02/13/hexo-%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/" itemprop="url">
-              
-                <span itemprop="name">hexo 问题记录</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2023-02-13T11:53:14+08:00"
-              content="2023-02-13" >
-          02-13
-        </time>
       </div>
-
-    </header>
-  </article>
-
-
-
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2023/02/13/hello-world/" itemprop="url">
-              
-                <span itemprop="name">Hello World</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2023-02-13T11:34:38+08:00"
-              content="2023-02-13" >
-          02-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
-
+      
     </div>
+    
+    
+    
   </div>
-  
-  
-  
-
-  
-
 
 
           </div>
@@ -326,6 +277,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -346,8 +301,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -423,6 +387,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95"><span class="nav-number">2.</span> <span class="nav-text">问题记录</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -563,6 +543,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
