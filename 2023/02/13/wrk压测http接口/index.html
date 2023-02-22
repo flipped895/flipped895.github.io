@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="hexo,next," />
+  <meta name="keywords" content="performance test,wrk," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="前言折腾这个网站，前前后后从大三到现在，也有三年多了，今天终于换了想要的主题。最大的感受就是，遇到问题不要无脑试，先分析问题在哪，然后google… 问题记录 hexo d以后，主题config和本地config不一致  使用next主题，本地已经保存主题的scheme了，但是用hexo -d部署以后远端表现没有和本地同步，会出现 1&amp;#123;% extends &amp;#x27;_layout.sw">
+<meta name="description" content="最近要压一个接口，要找到latency 50ms内的最大qps。因为locust不是很方便调节qps，所以打算用wrk试一下。wrk其实是github上的一个轮子，官方README对它的描述是：”a HTTP benchmarking tool“ 压测一个函数(Calculate)压测该函数前，需要准备测试数据，即被压函数的参数，准备测试数据的这部分时间应该被剔除。 cmd如下 1go test">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo 问题记录">
-<meta property="og:url" content="http://example.com/2023/02/13/hexo-%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/index.html">
+<meta property="og:title" content="wrk压测http接口">
+<meta property="og:url" content="http://example.com/2023/02/13/wrk%E5%8E%8B%E6%B5%8Bhttp%E6%8E%A5%E5%8F%A3/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="前言折腾这个网站，前前后后从大三到现在，也有三年多了，今天终于换了想要的主题。最大的感受就是，遇到问题不要无脑试，先分析问题在哪，然后google… 问题记录 hexo d以后，主题config和本地config不一致  使用next主题，本地已经保存主题的scheme了，但是用hexo -d部署以后远端表现没有和本地同步，会出现 1&amp;#123;% extends &amp;#x27;_layout.sw">
+<meta property="og:description" content="最近要压一个接口，要找到latency 50ms内的最大qps。因为locust不是很方便调节qps，所以打算用wrk试一下。wrk其实是github上的一个轮子，官方README对它的描述是：”a HTTP benchmarking tool“ 压测一个函数(Calculate)压测该函数前，需要准备测试数据，即被压函数的参数，准备测试数据的这部分时间应该被剔除。 cmd如下 1go test">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-02-13T03:53:14.000Z">
-<meta property="article:modified_time" content="2023-02-13T07:42:20.608Z">
+<meta property="article:published_time" content="2023-02-13T08:09:26.000Z">
+<meta property="article:modified_time" content="2023-02-22T09:49:17.987Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="hexo">
-<meta property="article:tag" content="next">
+<meta property="article:tag" content="performance test">
+<meta property="article:tag" content="wrk">
 <meta name="twitter:card" content="summary">
 
 
@@ -121,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://example.com/2023/02/13/hexo-问题记录/"/>
+  <link rel="canonical" href="http://example.com/2023/02/13/wrk压测http接口/"/>
 
 
 
 
 
-  <title>hexo 问题记录 | Hexo</title>
+  <title>wrk压测http接口 | Hexo</title>
   
 
 
@@ -294,7 +294,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/13/hexo-%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/13/wrk%E5%8E%8B%E6%B5%8Bhttp%E6%8E%A5%E5%8F%A3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
@@ -311,7 +311,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">hexo 问题记录</h1>
+          <h1 class="post-title" itemprop="name headline">wrk压测http接口</h1>
         
 
         <div class="post-meta">
@@ -323,7 +323,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2023-02-13T11:53:14+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2023-02-13T16:09:26+08:00">
                 2023-02-13
               </time>
             
@@ -339,8 +339,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2023-02-13T15:42:20+08:00">
-                2023-02-13
+              <time title="Post modified" itemprop="dateModified" datetime="2023-02-22T17:49:17+08:00">
+                2023-02-22
               </time>
             
           </span>
@@ -358,8 +358,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/problem-solution/" itemprop="url" rel="index">
-                    <span itemprop="name">problem solution</span>
+                  <a href="/categories/work/" itemprop="url" rel="index">
+                    <span itemprop="name">work</span>
                   </a>
                 </span>
 
@@ -426,31 +426,14 @@
       
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>折腾这个网站，前前后后从大三到现在，也有三年多了，今天终于换了想要的主题。最大的感受就是，遇到问题不要无脑试，先分析问题在哪，然后google…</p>
-<h2 id="问题记录"><a href="#问题记录" class="headerlink" title="问题记录"></a>问题记录</h2><ol>
-<li>hexo d以后，主题config和本地config不一致</li>
-</ol>
-<p>使用next主题，本地已经保存主题的scheme了，但是用hexo -d部署以后远端表现没有和本地同步，会出现</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% extends &#x27;_layout.swig&#x27; %&#125; &#123;% import &#x27;_macro/post.swig&#x27; as post_template %&#125; &#123;% import &#x27;_macro/sidebar.swig&#x27; as sidebar_template %&#125; &#123;% block title %&#125;&#123;&#123; config.title &#125;&#125;&#123;% if theme.index_with_subtitle and config.subtitle %&#125; - &#123;&#123;config.subtitle &#125;&#125;&#123;% endif %&#125;&#123;% endblock %&#125; &#123;% block page_class %&#125; &#123;% if is_home() %&#125;page-home&#123;% endif -%&#125; &#123;% endblock %&#125; &#123;% block content %&#125; &#123;% for post in page.posts %&#125; &#123;&#123; post_template.render(post, true) &#125;&#125; &#123;% endfor %&#125;</span><br></pre></td></tr></table></figure>
+        <p>最近要压一个接口，要找到latency 50ms内的最大qps。因为locust不是很方便调节qps，所以打算用wrk试一下。<br>wrk其实是github上的一个轮子，官方README对它的描述是：”<strong>a HTTP benchmarking tool</strong>“</p>
+<h2 id="压测一个函数-Calculate"><a href="#压测一个函数-Calculate" class="headerlink" title="压测一个函数(Calculate)"></a>压测一个函数(Calculate)</h2><p>压测该函数前，需要准备测试数据，即被压函数的参数，准备测试数据的这部分时间应该被剔除。</p>
+<p>cmd如下</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go <span class="built_in">test</span> -test.bench <span class="string">&#x27;CalculateScore&#x27;</span> -benchtime=10s</span><br></pre></td></tr></table></figure>
+<p>函数实现</p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">BenchmarkCalculateScore</span><span class="params">(b *testing.B)</span></span> &#123;</span><br><span class="line">    attrs, rerankList := randomInput() <span class="comment">//准备测试数据，即待测函数的参数</span></span><br><span class="line">    b.ResetTimer() <span class="comment">//在ResetTimer执行以后才开始计算时间</span></span><br><span class="line">    <span class="comment">// 开始压测</span></span><br><span class="line">    <span class="keyword">for</span> i := <span class="number">0</span>; i &lt; b.N; i++ &#123;</span><br><span class="line">        Calculate(attrs, rerankList)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//结束压测</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><strong>Solution</strong></p>
-<p>我用的next主题是作为sub module存在于我的网站文件夹中，所以hexo d的时候并没有吧next下的改动push上去。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">next的主题作为sub module，next/_config.yml的改动没有提交上去</span><br><span class="line"><span class="built_in">cd</span> theme/next</span><br><span class="line">git add .</span><br><span class="line">git commit -m “msg”</span><br><span class="line">git push</span><br><span class="line">刷新网站即可</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>一键部署时报错</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ERROR Deployer not found: GitHub</span><br></pre></td></tr></table></figure>
-
-<p><strong>Solution</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd theme/next</span><br><span class="line">git add .</span><br><span class="line">git commit -m “msg”</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
-
-<p>刷新网站即可</p>
-<ol start="3">
-<li>用hexo new page [title]新建.md文章后，hexo g不能正确生成文章</li>
-</ol>
-<p><strong>Solution</strong></p>
-<p>用<code>hexo new [title]</code>新建文章</p>
+<p><em>Refrence</em><br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/yahuian/p/go-benchmark.html#resettimer">Go benchmark 详解</a></p>
 
       
     </div>
@@ -468,9 +451,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/hexo/" rel="tag"># hexo</a>
+            <a href="/tags/performance-test/" rel="tag"># performance test</a>
           
-            <a href="/tags/next/" rel="tag"># next</a>
+            <a href="/tags/wrk/" rel="tag"># wrk</a>
           
         </div>
       
@@ -483,8 +466,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2023/02/13/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2023/02/13/pandas%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/" rel="next" title="pandas使用记录">
+                <i class="fa fa-chevron-left"></i> pandas使用记录
               </a>
             
           </div>
@@ -493,8 +476,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2023/02/13/%E9%80%8F%E4%BC%A0%E6%98%AF%E4%BB%80%E4%B9%88/" rel="prev" title="透传是什么?">
-                透传是什么? <i class="fa fa-chevron-right"></i>
+              <a href="/2023/02/14/%E4%B8%80%E4%BA%9B%E6%83%B3%E6%B3%95/" rel="prev" title="一些想法">
+                一些想法 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -647,7 +630,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95"><span class="nav-number">2.</span> <span class="nav-text">问题记录</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%8B%E6%B5%8B%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0-Calculate"><span class="nav-number">1.</span> <span class="nav-text">压测一个函数(Calculate)</span></a></li></ol></div>
             
 
           </div>
