@@ -532,7 +532,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2023-02-22T17:49:17+08:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2023-02-22T17:50:39+08:00">
                 2023-02-22
               </time>
             
@@ -622,13 +622,6 @@
         
           
             <p>最近要压一个接口，要找到latency 50ms内的最大qps。因为locust不是很方便调节qps，所以打算用wrk试一下。<br>wrk其实是github上的一个轮子，官方README对它的描述是：”<strong>a HTTP benchmarking tool</strong>“</p>
-<h2 id="压测一个函数-Calculate"><a href="#压测一个函数-Calculate" class="headerlink" title="压测一个函数(Calculate)"></a>压测一个函数(Calculate)</h2><p>压测该函数前，需要准备测试数据，即被压函数的参数，准备测试数据的这部分时间应该被剔除。</p>
-<p>cmd如下</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go <span class="built_in">test</span> -test.bench <span class="string">&#x27;CalculateScore&#x27;</span> -benchtime=10s</span><br></pre></td></tr></table></figure>
-<p>函数实现</p>
-<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">BenchmarkCalculateScore</span><span class="params">(b *testing.B)</span></span> &#123;</span><br><span class="line">    attrs, rerankList := randomInput() <span class="comment">//准备测试数据，即待测函数的参数</span></span><br><span class="line">    b.ResetTimer() <span class="comment">//在ResetTimer执行以后才开始计算时间</span></span><br><span class="line">    <span class="comment">// 开始压测</span></span><br><span class="line">    <span class="keyword">for</span> i := <span class="number">0</span>; i &lt; b.N; i++ &#123;</span><br><span class="line">        Calculate(attrs, rerankList)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//结束压测</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><em>Refrence</em><br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/yahuian/p/go-benchmark.html#resettimer">Go benchmark 详解</a></p>
 
           
         
@@ -1696,8 +1689,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2023-02-13T16:04:03+08:00">
-                2023-02-13
+              <time title="Post modified" itemprop="dateModified" datetime="2023-02-22T17:51:07+08:00">
+                2023-02-22
               </time>
             
           </span>
@@ -1763,7 +1756,14 @@
       
         
           
-            
+            <h2 id="压测一个函数-Calculate"><a href="#压测一个函数-Calculate" class="headerlink" title="压测一个函数(Calculate)"></a>压测一个函数(Calculate)</h2><p>压测该函数前，需要准备测试数据，即被压函数的参数.准备测试数据的这部分时间应该被剔除。</p>
+<p>cmd如下</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go <span class="built_in">test</span> -test.bench <span class="string">&#x27;CalculateScore&#x27;</span> -benchtime=10s</span><br></pre></td></tr></table></figure>
+<p>函数实现</p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">BenchmarkCalculateScore</span><span class="params">(b *testing.B)</span></span> &#123;</span><br><span class="line">    attrs, rerankList := randomInput() <span class="comment">//准备测试数据，即待测函数的参数</span></span><br><span class="line">    b.ResetTimer() <span class="comment">//在ResetTimer执行以后才开始计算时间</span></span><br><span class="line">    <span class="comment">// 开始压测</span></span><br><span class="line">    <span class="keyword">for</span> i := <span class="number">0</span>; i &lt; b.N; i++ &#123;</span><br><span class="line">        Calculate(attrs, rerankList)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//结束压测</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><em>Refrence</em><br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/yahuian/p/go-benchmark.html#resettimer">Go benchmark 详解</a></p>
+
           
         
       
