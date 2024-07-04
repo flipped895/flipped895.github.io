@@ -86,7 +86,7 @@ div {
   overflow: hidden;
 }
 #header .site-name #logo {
-  font: bold 38px/1.12 "Times New Roman", Georgia, Times, sans-serif;
+  font: bold 38px/1.12 "Arial", Georgia, Times, sans-serif;
   color: #555;
 }
 #header .site-name #logo span, #header .site-name #logo:hover {
@@ -230,13 +230,13 @@ div {
 }
 
 .post {
-  padding: 25px 0 15px;
+  padding: 50px 0 15px;
 }
 .post .post-title {
   margin: 0;
   color: #555;
   text-align: left;
-  font: bold 25px/1.1 "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
+  font: 25px/1.1 "Arial", Cambria, "Times New Roman", Georgia, Times, sans-serif;
 }
 .post .post-title a {
   color: #555;
@@ -502,7 +502,7 @@ div {
 }
 .post-archive h2 {
   margin: 0;
-  font: bold 25px/1.1 "ff-tisa-web-pro", Cambria, "Times New Roman", Georgia, Times, sans-serif;
+  font: bold 25px/1.1 "Arial", Cambria, "Times New Roman", Georgia, Times, sans-serif;
 }
 .post-archive .date {
   padding-right: 0.7em;
@@ -961,10 +961,10 @@ pre {
 }
 /* read more*/
 .readmore a {
-  font-size: 14px;
+  font-size: 10px;
   color: #444;
-  margin: -10px 0;
-  padding: 5px 10px;
+  margin: 5px 0;
+  padding: 3px 8px;
   border: 1px solid #ddd;
   border-radius: 5px;
   float: right;
