@@ -6,7 +6,7 @@
   <link href="https://flipped895.github.io/atom.xml" rel="self"/>
   
   <link href="https://flipped895.github.io/"/>
-  <updated>2024-07-04T15:09:57.839Z</updated>
+  <updated>2024-07-18T09:46:51.528Z</updated>
   <id>https://flipped895.github.io/</id>
   
   <author>
@@ -15,6 +15,184 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python_args_kwargs</title>
+    <link href="https://flipped895.github.io/2024/07/19/python-args-kwargs/"/>
+    <id>https://flipped895.github.io/2024/07/19/python-args-kwargs/</id>
+    <published>2024-07-18T17:46:23.000Z</published>
+    <updated>2024-07-18T09:46:51.528Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="work" scheme="https://flipped895.github.io/categories/work/"/>
+    
+    
+    <category term="python" scheme="https://flipped895.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python scope and data structures</title>
+    <link href="https://flipped895.github.io/2024/07/19/python-scope/"/>
+    <id>https://flipped895.github.io/2024/07/19/python-scope/</id>
+    <published>2024-07-18T16:54:49.000Z</published>
+    <updated>2024-07-18T09:46:14.192Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="work" scheme="https://flipped895.github.io/categories/work/"/>
+    
+    
+    <category term="python" scheme="https://flipped895.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python_loop</title>
+    <link href="https://flipped895.github.io/2024/07/19/python-loop/"/>
+    <id>https://flipped895.github.io/2024/07/19/python-loop/</id>
+    <published>2024-07-18T16:20:36.000Z</published>
+    <updated>2024-07-18T08:20:47.906Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="work" scheme="https://flipped895.github.io/categories/work/"/>
+    
+    
+    <category term="python" scheme="https://flipped895.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python_match statement</title>
+    <link href="https://flipped895.github.io/2024/07/19/python-match/"/>
+    <id>https://flipped895.github.io/2024/07/19/python-match/</id>
+    <published>2024-07-18T16:15:54.000Z</published>
+    <updated>2024-07-19T04:42:40.191Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="work" scheme="https://flipped895.github.io/categories/work/"/>
+    
+    
+    <category term="python" scheme="https://flipped895.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python_input_func</title>
+    <link href="https://flipped895.github.io/2024/07/18/python-input-func/"/>
+    <id>https://flipped895.github.io/2024/07/18/python-input-func/</id>
+    <published>2024-07-18T15:27:41.000Z</published>
+    <updated>2024-07-18T07:38:05.119Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="work" scheme="https://flipped895.github.io/categories/work/"/>
+    
+    
+    <category term="python" scheme="https://flipped895.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python_type_casting</title>
+    <link href="https://flipped895.github.io/2024/07/18/python-type-casting/"/>
+    <id>https://flipped895.github.io/2024/07/18/python-type-casting/</id>
+    <published>2024-07-18T15:22:42.000Z</published>
+    <updated>2024-07-18T08:47:59.967Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="work" scheme="https://flipped895.github.io/categories/work/"/>
+    
+    
+    <category term="python" scheme="https://flipped895.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python_string</title>
+    <link href="https://flipped895.github.io/2024/07/18/python-string/"/>
+    <id>https://flipped895.github.io/2024/07/18/python-string/</id>
+    <published>2024-07-18T15:16:16.000Z</published>
+    <updated>2024-07-18T07:19:27.876Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="work" scheme="https://flipped895.github.io/categories/work/"/>
+    
+    <category term="python" scheme="https://flipped895.github.io/categories/work/python/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>coursera_meta_backend_python</title>
+    <link href="https://flipped895.github.io/2024/07/14/coursera-meta-backend-python/"/>
+    <id>https://flipped895.github.io/2024/07/14/coursera-meta-backend-python/</id>
+    <published>2024-07-13T16:42:41.000Z</published>
+    <updated>2024-07-18T07:16:02.661Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="work" scheme="https://flipped895.github.io/categories/work/"/>
+    
+    <category term="backend" scheme="https://flipped895.github.io/categories/work/backend/"/>
+    
+    
+    <category term="python" scheme="https://flipped895.github.io/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>Finally recovered my blog</title>
@@ -89,7 +267,7 @@
     <link href="https://flipped895.github.io/2023/02/13/pandas%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/"/>
     <id>https://flipped895.github.io/2023/02/13/pandas%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/</id>
     <published>2023-02-13T00:00:00.000Z</published>
-    <updated>2024-07-03T10:40:23.493Z</updated>
+    <updated>2024-07-19T04:42:40.188Z</updated>
     
     
       
@@ -99,6 +277,12 @@
     
     
     
+    <category term="work" scheme="https://flipped895.github.io/categories/work/"/>
+    
+    
+    <category term="python" scheme="https://flipped895.github.io/tags/python/"/>
+    
+    <category term="pandas" scheme="https://flipped895.github.io/tags/pandas/"/>
     
   </entry>
   
@@ -295,148 +479,6 @@
     <category term="coding" scheme="https://flipped895.github.io/tags/coding/"/>
     
     <category term="leetcode" scheme="https://flipped895.github.io/tags/leetcode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Transferring Files Between Servers Using wget, smc-sftp</title>
-    <link href="https://flipped895.github.io/2021/11/03/wegt-introduction/"/>
-    <id>https://flipped895.github.io/2021/11/03/wegt-introduction/</id>
-    <published>2021-11-02T22:30:37.000Z</published>
-    <updated>2024-07-04T15:24:00.910Z</updated>
-    
-    
-      
-      
-    <summary type="html"></summary>
-      
-    
-    
-    
-    <category term="work" scheme="https://flipped895.github.io/categories/work/"/>
-    
-    <category term="python" scheme="https://flipped895.github.io/categories/work/python/"/>
-    
-    
-    <category term="linux" scheme="https://flipped895.github.io/tags/linux/"/>
-    
-    <category term="python" scheme="https://flipped895.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>docker_image_save_and_load</title>
-    <link href="https://flipped895.github.io/2021/11/02/docker-image-save-and-load/"/>
-    <id>https://flipped895.github.io/2021/11/02/docker-image-save-and-load/</id>
-    <published>2021-11-02T00:00:00.000Z</published>
-    <updated>2024-07-04T15:26:03.058Z</updated>
-    
-    
-      
-      
-    <summary type="html"></summary>
-      
-    
-    
-    
-    <category term="work" scheme="https://flipped895.github.io/categories/work/"/>
-    
-    
-    <category term="docker" scheme="https://flipped895.github.io/tags/docker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>linux_ln</title>
-    <link href="https://flipped895.github.io/2021/11/02/linux-ln/"/>
-    <id>https://flipped895.github.io/2021/11/02/linux-ln/</id>
-    <published>2021-11-02T00:00:00.000Z</published>
-    <updated>2024-07-04T15:25:15.536Z</updated>
-    
-    
-      
-      
-    <summary type="html"></summary>
-      
-    
-    
-    
-    <category term="work" scheme="https://flipped895.github.io/categories/work/"/>
-    
-    <category term="linux" scheme="https://flipped895.github.io/categories/work/linux/"/>
-    
-    
-    <category term="linux" scheme="https://flipped895.github.io/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Getting start with shell(1)</title>
-    <link href="https://flipped895.github.io/2021/01/13/linux-shell/"/>
-    <id>https://flipped895.github.io/2021/01/13/linux-shell/</id>
-    <published>2021-01-13T00:00:00.000Z</published>
-    <updated>2024-07-04T15:24:00.908Z</updated>
-    
-    
-      
-      
-    <summary type="html"></summary>
-      
-    
-    
-    
-    <category term="work" scheme="https://flipped895.github.io/categories/work/"/>
-    
-    <category term="linux" scheme="https://flipped895.github.io/categories/work/linux/"/>
-    
-    
-    <category term="linux" scheme="https://flipped895.github.io/tags/linux/"/>
-    
-    <category term="shell" scheme="https://flipped895.github.io/tags/shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2019电影总结</title>
-    <link href="https://flipped895.github.io/2019/11/24/2019%E7%94%B5%E5%BD%B1%E6%80%BB%E7%BB%93/"/>
-    <id>https://flipped895.github.io/2019/11/24/2019%E7%94%B5%E5%BD%B1%E6%80%BB%E7%BB%93/</id>
-    <published>2019-11-24T00:00:00.000Z</published>
-    <updated>2024-07-04T15:24:00.138Z</updated>
-    
-    
-      
-      
-    <summary type="html"></summary>
-      
-    
-    
-    
-    <category term="life" scheme="https://flipped895.github.io/categories/life/"/>
-    
-    
-    <category term="movies" scheme="https://flipped895.github.io/tags/movies/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>告别--acm</title>
-    <link href="https://flipped895.github.io/2019/10/28/%E5%91%8A%E5%88%AB--acm/"/>
-    <id>https://flipped895.github.io/2019/10/28/%E5%91%8A%E5%88%AB--acm/</id>
-    <published>2019-10-28T00:00:00.000Z</published>
-    <updated>2024-07-04T15:20:57.879Z</updated>
-    
-    
-      
-      
-    <summary type="html"></summary>
-      
-    
-    
-    
-    <category term="life" scheme="https://flipped895.github.io/categories/life/"/>
-    
-    
-    <category term="acm" scheme="https://flipped895.github.io/tags/acm/"/>
     
   </entry>
   
