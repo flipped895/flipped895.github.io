@@ -6,7 +6,7 @@
   <link href="https://flipped895.github.io/atom.xml" rel="self"/>
   
   <link href="https://flipped895.github.io/"/>
-  <updated>2024-07-28T14:20:40.492Z</updated>
+  <updated>2024-09-03T05:25:40.213Z</updated>
   <id>https://flipped895.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>王朔</title>
+    <link href="https://flipped895.github.io/2024/08/31/%E7%8E%8B%E6%9C%94/"/>
+    <id>https://flipped895.github.io/2024/08/31/%E7%8E%8B%E6%9C%94/</id>
+    <published>2024-08-31T00:00:00.000Z</published>
+    <updated>2024-09-03T05:25:40.213Z</updated>
+    
+    
+      
+      
+    <summary type="html"></summary>
+      
+    
+    
+    
+    <category term="life" scheme="https://flipped895.github.io/categories/life/"/>
+    
+    
+    <category term="reading" scheme="https://flipped895.github.io/tags/reading/"/>
+    
+  </entry>
   
   <entry>
     <title>Personal Bill Tracker</title>
@@ -37,30 +59,6 @@
     <category term="python" scheme="https://flipped895.github.io/tags/python/"/>
     
     <category term="personal" scheme="https://flipped895.github.io/tags/personal/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>coursera_meta_backend_python</title>
-    <link href="https://flipped895.github.io/2024/07/14/coursera-meta-backend-python/"/>
-    <id>https://flipped895.github.io/2024/07/14/coursera-meta-backend-python/</id>
-    <published>2024-07-13T16:42:41.000Z</published>
-    <updated>2024-07-18T07:16:02.661Z</updated>
-    
-    
-      
-      
-    <summary type="html"></summary>
-      
-    
-    
-    
-    <category term="work" scheme="https://flipped895.github.io/categories/work/"/>
-    
-    <category term="backend" scheme="https://flipped895.github.io/categories/work/backend/"/>
-    
-    
-    <category term="python" scheme="https://flipped895.github.io/tags/python/"/>
     
   </entry>
   
@@ -117,7 +115,7 @@
     <link href="https://flipped895.github.io/2023/02/14/%E4%B8%80%E4%BA%9B%E6%83%B3%E6%B3%95/"/>
     <id>https://flipped895.github.io/2023/02/14/%E4%B8%80%E4%BA%9B%E6%83%B3%E6%B3%95/</id>
     <published>2023-02-14T00:00:00.000Z</published>
-    <updated>2024-07-03T11:21:36.691Z</updated>
+    <updated>2024-09-03T05:24:37.027Z</updated>
     
     
       
@@ -207,48 +205,6 @@
     <category term="performance_test" scheme="https://flipped895.github.io/tags/performance-test/"/>
     
     <category term="golang" scheme="https://flipped895.github.io/tags/golang/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Canada_1</title>
-    <link href="https://flipped895.github.io/2023/02/06/Canada-1/"/>
-    <id>https://flipped895.github.io/2023/02/06/Canada-1/</id>
-    <published>2023-02-06T00:00:00.000Z</published>
-    <updated>2024-07-04T15:24:00.906Z</updated>
-    
-    
-      
-      
-    <summary type="html"></summary>
-      
-    
-    
-    
-    <category term="life" scheme="https://flipped895.github.io/categories/life/"/>
-    
-    
-    <category term="Canada" scheme="https://flipped895.github.io/tags/Canada/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>世界是个巨大的草台班子</title>
-    <link href="https://flipped895.github.io/2023/01/13/%E4%B8%96%E7%95%8C%E6%98%AF%E4%B8%AA%E5%B7%A8%E5%A4%A7%E7%9A%84%E8%8D%89%E5%8F%B0%E7%8F%AD%E5%AD%90/"/>
-    <id>https://flipped895.github.io/2023/01/13/%E4%B8%96%E7%95%8C%E6%98%AF%E4%B8%AA%E5%B7%A8%E5%A4%A7%E7%9A%84%E8%8D%89%E5%8F%B0%E7%8F%AD%E5%AD%90/</id>
-    <published>2023-01-13T00:00:00.000Z</published>
-    <updated>2024-07-04T15:10:36.404Z</updated>
-    
-    
-      
-      
-    <summary type="html"></summary>
-      
-    
-    
-    
-    <category term="life" scheme="https://flipped895.github.io/categories/life/"/>
-    
     
   </entry>
   
